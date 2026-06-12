@@ -1,54 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stephen Tsai - Personal Website</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stephen Tsai</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
 
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">ST</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"><span>01.</span> About</a></li>
+        <li><a href="#experience"><span>02.</span> Experience</a></li>
+        <li><a href="#projects"><span>03.</span> Projects</a></li>
+        <li><a href="#skills"><span>04.</span> Skills</a></li>
+        <li><a href="resume.html" class="nav-resume">Resume</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-
-    <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Stephen Tsai</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="btn primary">Home</a></li>
-                    <li><a href="resume.html" class="btn primary">Resume</a></li>
-                    <li><a href="#projects" class="btn primary">Projects</a></li>
-                </ul>
-            </nav>
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi, my name is</p>
+        <h1 class="hero-name">Stephen Tsai.</h1>
+        <h2 class="hero-sub">I <span id="typed-text"></span><span class="blink-cursor">|</span></h2>
+        <p class="hero-desc">
+          CS student at Virginia Tech (GPA 3.79) focused on machine learning and NLP.
+          Regeneron ISEF Finalist, hackathon winner, and undergraduate ML researcher.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="mailto:stsai0601@vt.edu" class="btn-outline">Get In Touch</a>
         </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h2 class="subtitle">  </h2>
-            
-            <h1 class="highlight">NLP Research & CS at Virginia Tech</h1>
+        <div class="hero-socials">
+          <a href="https://github.com/stephen0601" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/stephentsai0601/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:stsai0601@vt.edu" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
         </div>
-
-
-        <div class="hero-image">
-            <img src="webPic.JPG" alt="Stephen Tsai">
+      </div>
+      <div class="hero-photo">
+        <div class="photo-wrapper">
+          <img src="pfp.png" alt="Stephen Tsai">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <section id="about" class="section reveal">
+      <h2 class="section-heading"><span class="num">01.</span> About Me</h2>
+      <div class="about-text">
+        <p>I'm a sophomore studying Computer Science at Virginia Tech, focused on machine learning and natural language processing. I love building AI-powered tools that solve real-world problems — from analyzing thousands of university AI policies to detecting drowsy drivers in real time.</p>
+        <p>I've conducted funded undergraduate research through the College of Engineering and competed in hackathons, winning Poolesville_hacks and OneHacksII. Outside the keyboard, I'm on Virginia Tech's Table Tennis team.</p>
+        <ul class="about-facts">
+          <li><span class="fact-label">Education</span> B.S. Computer Science, Virginia Tech (May 2028)</li>
+          <li><span class="fact-label">GPA</span> 3.79 &mdash; Dean's List with Distinction</li>
+          <li><span class="fact-label">Research</span> NLP &amp; ML, VT College of Engineering</li>
+          <li><span class="fact-label">Awards</span> Regeneron ISEF Finalist &middot; Hackathon Winner (x2)</li>
+          <li><span class="fact-label">Email</span> <a href="mailto:stsai0601@vt.edu">stsai0601@vt.edu</a></li>
+        </ul>
+      </div>
     </section>
-    
-    
-    <footer>
-        <div class="bottom-image">
-            <a href="https://www.linkedin.com/in/stephen-tsai-817271241/" target="_blank">
-                <img src="linkedin.png" alt="LinkedIn Profile">
-            </a>
-            <a href="https://abstracts.societyforscience.org/Home/FullAbstract?Category=Any%20Category&AllAbstracts=True&FairCountry=Any%20Country&FairState=Any%20State&ProjectId=23927" target="_blank">
-                <img src="ISEFLogo.png" alt="ISEF Logo">
-            </a>
+
+    <section id="experience" class="section">
+      <h2 class="section-heading"><span class="num">02.</span> Experience</h2>
+      <div class="exp-list">
+
+        <div class="exp-card reveal">
+          <div class="exp-top">
+            <div class="exp-meta">
+              <h3 class="exp-role">Undergraduate Researcher <span class="exp-at">@ Virginia Tech CoE</span></h3>
+              <p class="exp-loc">Blacksburg, VA &middot; Machine Learning &amp; NLP</p>
+            </div>
+            <span class="exp-date">Jan 2025 &ndash; Jun 2025</span>
+          </div>
+          <ul class="exp-points">
+            <li>Built Python NLP pipelines to collect and analyze 500+ university AI policy webpages and 1,000+ OCR-converted PDFs</li>
+            <li>Evaluated 5+ text-processing and LLM pipelines, improving large-scale policy analysis throughput by ~30%</li>
+            <li>Extracted structured policy metadata using HuggingFace models for nationwide trend analysis</li>
+            <li>Research funded by the Institute for Society, Culture and Environment</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+            <span class="tag">HuggingFace</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">OCR</span>
+          </div>
         </div>
-    </footer>
-    
+
+        <div class="exp-card reveal">
+          <div class="exp-top">
+            <div class="exp-meta">
+              <h3 class="exp-role">Administration / IT Intern <span class="exp-at">@ Alarm.com</span></h3>
+              <p class="exp-loc">Tysons, VA</p>
+            </div>
+            <span class="exp-date">Jun 2022 &ndash; Aug 2022</span>
+          </div>
+          <ul class="exp-points">
+            <li>Coordinated with IT and admin teams to resolve internal technical support requests, improving operational efficiency</li>
+            <li>Assisted with internal systems, tooling support, and technical documentation</li>
+            <li>Gained exposure to production engineering workflows through cross-team collaboration and technical seminars</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">IT Support</span>
+            <span class="tag">Technical Documentation</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-heading"><span class="num">03.</span> Projects</h2>
+      <div class="projects-grid">
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <svg class="proj-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="proj-links">
+              <a href="https://github.com/stephen0601/simplify" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-name">Simplify</h3>
+          <p class="proj-desc">Cross-platform desktop app that summarizes and simplifies highlighted text from any application using global hotkeys and clipboard integration. Powered by a locally-hosted LLaMA 3.1 model.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Flet</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">LLaMA 3.1</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <svg class="proj-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="proj-links">
+              <a href="https://abstracts.societyforscience.org/Home/FullAbstract?Category=Any%20Category&AllAbstracts=True&FairCountry=Any%20Country&FairState=Any%20State&ProjectId=23927" target="_blank" rel="noopener" aria-label="ISEF Abstract">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-name">ARM &mdash; Automated Recyclable Management</h3>
+          <p class="proj-desc">Trained an object detection model to classify recyclable materials and integrated it into a custom hardware prototype for automated waste sorting. Presented at Regeneron ISEF as a top finalist.</p>
+          <div class="tag-row">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Object Detection</span>
+            <span class="tag">Python</span>
+            <span class="tag">Hardware</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <svg class="proj-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="proj-links">
+              <a href="https://github.com/stephen0601" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-name">EyeSpy</h3>
+          <p class="proj-desc">Real-time driver drowsiness detection using computer vision. Integrates a TensorFlow eye-closure detection pipeline with Pygame audio alerts to enhance road safety.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Pygame</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <svg class="proj-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="proj-links">
+              <a href="https://github.com/stephen0601" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-name">ShooterStopper</h3>
+          <p class="proj-desc">AI-powered surveillance system for real-time firearm detection in video footage. Deployed EfficientDet via Flask REST API with a React.js frontend and CockroachDB for threat history logging.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">EfficientDet</span>
+            <span class="tag">Flask</span>
+            <span class="tag">React</span>
+            <span class="tag">CockroachDB</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <h2 class="section-heading"><span class="num">04.</span> Skills</h2>
+      <div class="skills-container">
+        <div class="skill-group">
+          <h3 class="skill-cat">Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bash</span>
+            <span class="tag">C</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-cat">Frameworks &amp; Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">HuggingFace</span>
+            <span class="tag">React</span>
+            <span class="tag">Flask</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-cat">Libraries</h3>
+          <div class="skill-tags">
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Scikit-learn</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="footer-credit">Designed &amp; Built by <span>Stephen Tsai</span></p>
+    <div class="footer-links">
+      <a href="https://github.com/stephen0601" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/stephentsai0601/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:stsai0601@vt.edu">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    // Typewriter
+    const words = ['build AI tools.', 'research NLP.', 'love hackathons.', 'study CS @ VT.'];
+    let wordIdx = 0, charIdx = 0, deleting = false;
+    const typed = document.getElementById('typed-text');
+    function type() {
+      const word = words[wordIdx];
+      typed.textContent = deleting ? word.slice(0, charIdx--) : word.slice(0, charIdx++);
+      let delay = deleting ? 55 : 95;
+      if (!deleting && charIdx === word.length + 1) { delay = 1800; deleting = true; }
+      else if (deleting && charIdx < 0) { deleting = false; wordIdx = (wordIdx + 1) % words.length; charIdx = 0; delay = 400; }
+      setTimeout(type, delay);
+    }
+    type();
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Nav shadow on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }));
+  </script>
 </body>
 </html>
-
