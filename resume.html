@@ -25,15 +25,158 @@
     </div>
   </nav>
 
-  <section class="resume-section">
-    <div class="resume-header">
-      <h2 class="resume-title">Resume</h2>
-      <a href="webRes.pdf" target="_blank" rel="noopener" class="btn-primary">Open PDF</a>
+  <main class="res-page">
+    <div class="res-actions">
+      <a href="webRes.pdf" target="_blank" rel="noopener" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" style="margin-right:6px;vertical-align:middle"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Download PDF
+      </a>
     </div>
-    <div class="resume-frame">
-      <iframe src="webRes.pdf#zoom=FitH" title="Stephen Tsai Resume"></iframe>
+
+    <div class="res-paper">
+
+      <header class="res-header">
+        <h1 class="res-name">Stephen Tsai</h1>
+        <div class="res-contact">
+          <a href="tel:7039392801">(703) 939-2801</a>
+          <span class="res-sep">|</span>
+          <a href="mailto:stsai0601@vt.edu">stsai0601@vt.edu</a>
+          <span class="res-sep">|</span>
+          <a href="https://www.linkedin.com/in/stephentsai0601/" target="_blank" rel="noopener">linkedin.com/in/stephentsai0601</a>
+          <span class="res-sep">|</span>
+          <a href="https://github.com/stephen0601" target="_blank" rel="noopener">github.com/stephen0601</a>
+        </div>
+      </header>
+
+      <section class="res-section">
+        <h2 class="res-sec-title">Education</h2>
+        <div class="res-entry">
+          <div class="res-entry-top">
+            <div>
+              <p class="res-org">Virginia Polytechnic Institute and State University</p>
+              <p class="res-role">Bachelor of Science in Computer Science &mdash; GPA: 3.79</p>
+            </div>
+            <div class="res-right">
+              <p class="res-place">Blacksburg, VA</p>
+              <p class="res-date">Expected May 2028</p>
+            </div>
+          </div>
+          <p class="res-sub"><span class="res-label">Relevant Coursework:</span> Linear Algebra &nbsp;&middot;&nbsp; Software Design &amp; Data Structures &nbsp;&middot;&nbsp; Discrete Mathematics &nbsp;&middot;&nbsp; Computer Organization I</p>
+        </div>
+      </section>
+
+      <section class="res-section">
+        <h2 class="res-sec-title">Experience</h2>
+
+        <div class="res-entry">
+          <div class="res-entry-top">
+            <div>
+              <p class="res-org">Virginia Tech College of Engineering</p>
+              <p class="res-role">Undergraduate Researcher &mdash; Machine Learning and Natural Language Processing (NLP)</p>
+            </div>
+            <div class="res-right">
+              <p class="res-place">Blacksburg, VA</p>
+              <p class="res-date">Jan 2025 &ndash; Jun 2025</p>
+            </div>
+          </div>
+          <ul class="res-bullets">
+            <li>Built Python-based NLP pipelines to collect and analyze 500+ university AI policy webpages and 1,000+ OCR-converted PDFs</li>
+            <li>Evaluated and benchmarked 5+ text-processing and LLM pipelines, improving large-scale policy analysis throughput by ~30%</li>
+            <li>Extracted structured policy metadata using HuggingFace models and custom preprocessing for nationwide trend analysis</li>
+            <li>Funded research by the Institute for Society, Culture and Environment</li>
+          </ul>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-entry-top">
+            <div>
+              <p class="res-org">Alarm.com</p>
+              <p class="res-role">Administration / IT Intern</p>
+            </div>
+            <div class="res-right">
+              <p class="res-place">Tysons, VA</p>
+              <p class="res-date">Jun 2022 &ndash; Aug 2022</p>
+            </div>
+          </div>
+          <ul class="res-bullets">
+            <li>Coordinated with IT and administrative teams to resolve internal technical support requests, improving operational efficiency</li>
+            <li>Assisted with internal systems, tooling support, and technical documentation while gaining exposure to production engineering workflows</li>
+            <li>Gained exposure to production software engineering workflows through cross-team collaboration and technical seminars</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="res-section">
+        <h2 class="res-sec-title">Projects</h2>
+
+        <div class="res-entry">
+          <div class="res-entry-top">
+            <div>
+              <p class="res-org">Simplify <span class="res-tech">| Python, Flet, Ollama (LLaMA 3.1)</span></p>
+            </div>
+            <div class="res-right">
+              <p class="res-date">Dec 2025 &ndash; Present</p>
+            </div>
+          </div>
+          <ul class="res-bullets">
+            <li>Built a cross-platform desktop application that summarizes and simplifies highlighted text from any application using global hotkeys and clipboard integration</li>
+            <li>Integrated a locally hosted large language model (LLaMA 3.1) with Python to perform simplification and summarization of text</li>
+            <li>Designed a custom and responsive GUI using Flet to display real-time input and processed output</li>
+          </ul>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-entry-top">
+            <div>
+              <p class="res-org">ARM (Automated Recyclable Management) <span class="res-proj-links"><a href="https://abstracts.societyforscience.org/Home/FullAbstract?Category=Any%20Category&AllAbstracts=True&FairCountry=Any%20Country&FairState=Any%20State&ProjectId=23927" target="_blank" rel="noopener">Abstract</a></span></p>
+            </div>
+          </div>
+          <ul class="res-bullets">
+            <li>Designed and trained an object detection model to classify recyclable materials across multiple waste categories</li>
+            <li>Built and integrated a custom hardware prototype to automate waste sorting using real-time computer vision inference</li>
+            <li>Performed dataset collection, labeling, and model evaluation to improve detection accuracy under varying conditions</li>
+            <li>Deployed and demonstrated an end-to-end vision-to-hardware pipeline through live testing and competition presentations</li>
+          </ul>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-entry-top">
+            <div>
+              <p class="res-org">EyeSpy <span class="res-proj-links"><a href="https://github.com/stephen0601" target="_blank" rel="noopener">GitHub</a></span></p>
+            </div>
+          </div>
+          <ul class="res-bullets">
+            <li>Created a real-time driver drowsiness detection system utilizing computer vision techniques to enhance road safety</li>
+            <li>Integrated TensorFlow pipeline with audio alerts deploying Pygame for eye closure detection</li>
+          </ul>
+        </div>
+
+        <div class="res-entry">
+          <div class="res-entry-top">
+            <div>
+              <p class="res-org">ShooterStopper <span class="res-proj-links"><a href="https://github.com/stephen0601" target="_blank" rel="noopener">GitHub</a></span></p>
+            </div>
+          </div>
+          <ul class="res-bullets">
+            <li>Developed an AI-powered surveillance system to identify firearms in real-time surveillance footage</li>
+            <li>Deployed EfficientDet via Flask REST API and integrated with React.js frontend for real-time video monitoring</li>
+            <li>Logged detection events to CockroachDB for real-time threat history tracking</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="res-section">
+        <h2 class="res-sec-title">Involvements &amp; Skills</h2>
+        <div class="res-skills">
+          <p><span class="res-label">Awards:</span> Regeneron ISEF Finalist (Top 1,800 students across 75+ countries) &nbsp;&middot;&nbsp; Winner at Poolesville_hacks and OneHacksII &nbsp;&middot;&nbsp; Dean's List with Distinction (GPA &gt; 3.75) &nbsp;&middot;&nbsp; Virginia Tech Table Tennis Team</p>
+          <p><span class="res-label">Languages:</span> Python, Java, JavaScript, Bash, C</p>
+          <p><span class="res-label">Frameworks / Tools:</span> Linux, TensorFlow, HuggingFace, GitHub, React, OpenCV</p>
+          <p><span class="res-label">Libraries:</span> Pandas, NumPy, Matplotlib, Scikit-learn</p>
+        </div>
+      </section>
+
     </div>
-  </section>
+  </main>
 
   <footer>
     <p class="footer-credit">Designed &amp; Built by <span>Stephen Tsai</span></p>
@@ -50,6 +193,9 @@
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('open');
       navLinks.classList.toggle('open');
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
     });
   </script>
 </body>
